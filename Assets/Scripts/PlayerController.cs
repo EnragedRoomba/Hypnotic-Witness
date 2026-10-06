@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpStrength = 2.5f;
     [SerializeField] private float gravity = 20.5f;
 
+    [SerializeField] AudioSource mew;
+
     private bool jumped = false;
 
 
@@ -106,7 +108,7 @@ public class PlayerController : MonoBehaviour
     private void Jumped(InputAction.CallbackContext context)
     {
         jumped = true;
-
+        mew.Play();
     }
 
 
